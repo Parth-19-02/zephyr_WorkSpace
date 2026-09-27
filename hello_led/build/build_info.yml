@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: 'D:/ZephyrWrokSpace/lomico/zephyr-course/my_work_space/hello_led'
+    source-dir: 'D:/ZephyrWrokSpace/lomico/zephyr-course/my_work_space/hello_led'
+  board:
+    name: 'esp32s3_devkitc'
+    path:
+     - 'D:/zephyrproject/zephyr/boards/espressif/esp32s3_devkitc'
+    qualifiers: 'esp32s3/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - 'D:/zephyrproject/zephyr/dts/bindings'
+    files:
+     - 'D:/zephyrproject/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts'
+     - 'D:/ZephyrWrokSpace/lomico/zephyr-course/my_work_space/hello_led/boards/esp32s3_devkitc_procpu.overlay'
+    include-dirs:
+     - 'D:/zephyrproject/modules/hal/ambiq/dts'
+     - 'D:/zephyrproject/modules/hal/atmel/include'
+     - 'D:/zephyrproject/modules/hal/bouffalolab/include'
+     - 'D:/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - 'D:/zephyrproject/modules/hal/gigadevice/include'
+     - 'D:/zephyrproject/modules/hal/microchip/include'
+     - 'D:/zephyrproject/modules/hal/microchip/dts'
+     - 'D:/zephyrproject/modules/hal/nuvoton/dts'
+     - 'D:/zephyrproject/modules/hal/nxp/dts'
+     - 'D:/zephyrproject/modules/hal/stm32/dts'
+     - 'D:/zephyrproject/modules/hal/ti/dts'
+     - 'D:/zephyrproject/zephyr/include'
+     - 'D:/zephyrproject/zephyr/include/zephyr'
+     - 'D:/zephyrproject/zephyr/dts/common'
+     - 'D:/zephyrproject/zephyr/dts/vendor'
+     - 'D:/zephyrproject/zephyr/dts/rx'
+     - 'D:/zephyrproject/zephyr/dts/x86'
+     - 'D:/zephyrproject/zephyr/dts/xtensa'
+     - 'D:/zephyrproject/zephyr/dts/sparc'
+     - 'D:/zephyrproject/zephyr/dts/riscv'
+     - 'D:/zephyrproject/zephyr/dts/posix'
+     - 'D:/zephyrproject/zephyr/dts/arm64'
+     - 'D:/zephyrproject/zephyr/dts/arm'
+     - 'D:/zephyrproject/zephyr/dts/arc'
+     - 'D:/zephyrproject/zephyr/dts'
+    user-files:
+     - 'D:/ZephyrWrokSpace/lomico/zephyr-course/my_work_space/hello_led/boards/esp32s3_devkitc_procpu.overlay'
+  kconfig:
+    files:
+     - 'D:/zephyrproject/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu_defconfig'
+     - 'D:/ZephyrWrokSpace/lomico/zephyr-course/my_work_space/hello_led/prj.conf'
+    user-files:
+     - 'D:/ZephyrWrokSpace/lomico/zephyr-course/my_work_space/hello_led/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: 'C:/Users/PARTH/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: 'D:/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: 'D:\zephyrproject\.venv\Scripts\west build -b esp32s3_devkitc/esp32s3/procpu --pristine'
+  topdir: 'D:\zephyrproject'
+  version: '1.5.0'

@@ -1,0 +1,86 @@
+/ {
+    aliases {
+        led0 = &myled;
+    };
+};
+
+&gpio0 {
+    status = "okay";
+};
+
+/ {
+    leds {
+        compatible = "gpio-leds";
+        myled: led_0 {
+            gpios = <&gpio0 38 GPIO_ACTIVE_HIGH>; // change pin to your board's LED pin
+        };
+    };
+ };
+// #include <zephyr/dt-bindings/gpio/gpio.h>
+// #include <zephyr/dt-bindings/led/led.h>
+// / {
+//     aliases {
+//         led-strip = &led_strip;
+//     };
+// };
+
+// &gpio0 {
+//     status = "okay";
+// };
+
+// /* Define the WS2812 pin controller */
+// &gpio0 {
+//     led_strip: ws2812 {
+//         compatible = "worldsemi,ws2812-gpio";
+//         /* Change to 48 if you have an older v1.0 board */
+//         gpios = <&gpio0 38 GPIO_ACTIVE_HIGH>; 
+//         chain-length = <1>; /* Onboard has exactly 1 RGB LED */
+//         color-mapping = <LED_COLOR_CHANNELS_GRB>;
+//         status = "okay";
+//     };
+// };
+
+// / {
+//     aliases {
+//         led-strip = &led_strip;
+//     };
+// };
+
+// &gpio0 {
+//     status = "okay";
+// };
+
+// &gpio0 {
+//     led_strip: ws2812 {
+//         /* Swap to RMT compatible driver mapping */
+//         compatible = "worldsemi,ws2812-rmt";
+//         gpios = <&gpio0 38 0>; 
+//         chain-length = <1>; 
+//         color-mapping = <2 1 3>;
+//         status = "okay";
+//     };
+// };
+
+// / {
+//     aliases {
+//         led-strip = &led_strip;
+//     };
+// };
+
+// &gpio0 {
+//     status = "okay";
+// };
+
+// &gpio0 {
+//     led_strip: ws2812 {
+//         compatible = "worldsemi,ws2812-gpio";
+//         /* 38 is the GPIO pin, 0 means GPIO_ACTIVE_HIGH */
+//         gpios = <&gpio0 38 0>; 
+//         chain-length = <1>; 
+//         /* 2 = Green, 1 = Red, 3 = Blue */
+//         color-mapping = <2 1 3>;
+//         status = "okay";
+//     };
+// };
+
+
